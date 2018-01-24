@@ -1,4 +1,4 @@
-# Meosis-starter-app
+# Meiosis-starter-flyd-react
 
 
 
@@ -8,7 +8,7 @@ Clone this repository and install its dependencies:
 
 ```bash
 git clone https://github.com/...
-cd meosis-starter-app
+cd meiosis-starter-flyd-react
 npm install
 ```
 
@@ -22,6 +22,3 @@ The `public/index.html` file contains a `<script src='bundle.js'>` tag, which me
 
 `npm run dev` will run `npm start` and `npm run watch` in parallel.
 
-## License
-
-[MIT](LICENSE).
