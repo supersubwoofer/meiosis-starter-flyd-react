@@ -10,6 +10,10 @@ const createActions = update => ({
   increase: () => update(model => {
     model.value = model.value + 1;
     return model;
+  }),
+  decrease: () => update(model => {
+    model.value = model.value - 1;
+    return model;
   })
 });
 
@@ -18,6 +22,8 @@ const createView = actions => model => (
     <span>Temperature: {model.value}&deg;C </span>
     <button className="btn btn-default"
       onClick={actions.increase}>Increase</button>
+    <button className="btn btn-default"
+      onClick={actions.decrease}>Decrease</button>
   </div>
 );
 

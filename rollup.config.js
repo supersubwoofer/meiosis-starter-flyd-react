@@ -1,8 +1,8 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import uglify from 'rollup-plugin-uglify';
 import babel from 'rollup-plugin-babel';
 import globals from 'rollup-plugin-node-globals';
+import uglify from 'rollup-plugin-uglify';
 
 // `npm run build` -> `production` is true
 // `npm run dev` -> `production` is false
@@ -21,22 +21,22 @@ export default {
       exclude: 'node_modules/process-es6/**',
       include: [
         'node_modules/create-react-class/**',
-        'node_modules/fbjs/**',
-        'node_modules/object-assign/**',
         'node_modules/react/**',
         'node_modules/react-dom/**',
+        'node_modules/fbjs/**',
+        'node_modules/object-assign/**',
         'node_modules/prop-types/**',
         'node_modules/flyd/**',
         'node_modules/ramda/**'
       ]
-    }), 
-		production && uglify(), // minify, but only in production
+    }),
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
       presets: [ [ 'es2015', { modules: false } ], 'stage-0', 'react' ],
       plugins: [ 'external-helpers' ]
     }),
-    globals()
+    globals(), 
+		production && uglify() // minify, but only in production
 	]
 };
