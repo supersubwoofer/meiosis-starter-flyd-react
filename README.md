@@ -7,12 +7,12 @@
 Clone this repository and install its dependencies:
 
 ```bash
-git clone https://github.com/...
+git clone https://github.com/supersubwoofer/meiosis-starter-flyd-react.git
 cd meiosis-starter-flyd-react
 npm install
 ```
 
-The `public/index.html` file contains a `<script src='bundle.js'>` tag, which means we need to create `public/bundle.js`. The `rollup.config.js` file tells Rollup how to create this bundle, starting with `src/main.js` and including all its dependencies, including [date-fns](https://date-fns.org).
+The `public/index.html` file contains a `<script src='bundle.js'>` tag, which means we need to create `public/bundle.js`. The `rollup.config.js` file tells Rollup how to create this bundle, starting with `src/main.js` and including all its dependencies.
 
 `npm run build` builds the application to `public/bundle.js`, along with a sourcemap file for debugging.
 
