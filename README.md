@@ -1,6 +1,6 @@
 # Meiosis-starter-flyd-react
 
-
+[Meosis](https://github.com/foxdonut/meiosis/wiki) basic setup
 
 ## Getting started
 
